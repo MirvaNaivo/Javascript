@@ -7,7 +7,9 @@ function computerPlay() {
 
 console.log(computerPlay());
 
-
+let wins = 0;
+let ties = 0;
+let losses = 0;
 
 function gamePlay(playerSelection, computerSelection) {
     let answer = prompt("Rock, Paper or Scissors?");
@@ -18,36 +20,54 @@ function gamePlay(playerSelection, computerSelection) {
     switch(playerSelection) {
         case "ROCK": 
         if(computerSelection == "ROCK") {
-            return "It's a tie!";
+            ties++;
+            return alert("It's a tie!");
         }
         else if(computerSelection == "PAPER") {
-            return "You Lose! Paper beats Rock!";
+            losses++;
+            return alert("You Lose! Paper beats Rock!");
         }
         else if(computerSelection == "SCISSORS") {
-            return "You Win! Rock beats Scissors!";
+            wins++;
+            return alert("You Win! Rock beats Scissors!");
         }
         case "PAPER": 
         if(computerSelection == "PAPER") {
-            return "It's a tie!";
+            ties++;
+            return alert("It's a tie!");
         }
         else if(computerSelection == "SCISSORS") {
-            return "You Lose! Scissors beats Paper!";
+            losses++;
+            return alert("You Lose! Scissors beats Paper!");
         }
         else if(computerSelection == "ROCK") {
-            return "You Win! Paper beats Rock!";
+            wins++;
+            return alert("You Win! Paper beats Rock!");
         }
         case "SCISSORS": 
         if(computerSelection == "SCISSORS") {
-            return "It's a tie!";
+            ties++;
+            return alert("It's a tie!");
         }
         else if(computerSelection == "ROCK") {
-            return "You Lose! Rock beats Scissors!";
+            losses++;
+            return alert("You Lose! Rock beats Scissors!");
         }
         else if(computerSelection == "PAPER") {
-            return "You Win! Scissors beats Paper!";
+            wins++;
+            return alert("You Win! Scissors beats Paper!");
         }
     }
 }
 
-console.log(gamePlay());
+let counter = 0;
+
+while (counter < 5) {
+    gamePlay();
+    counter++;
+}
+
+if (counter === 5) {
+    alert("Game over! Scores: \n wins: " +  wins + " ties: " + ties + " losses: " + losses);
+}
 
