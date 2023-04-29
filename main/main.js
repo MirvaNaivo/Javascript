@@ -19,47 +19,43 @@ function playRound(playerSelection, computerSelection) {
 
     switch (playerSelection) {
         case "ROCK":
-            if (computerSelection == "ROCK") {
-                ties++;
-                return alert("It's a tie!");
-            }
-            else if (computerSelection == "PAPER") {
-                losses++;
-                return alert("You Lose! Paper beats Rock!");
-            }
-            else if (computerSelection == "SCISSORS") {
-                wins++;
-                return alert("You Win! Rock beats Scissors!");
+            switch (computerSelection) {
+                case "ROCK":
+                    ties++;
+                    return alert("It's a tie!");
+                case "PAPER":
+                    losses++;
+                    return alert("You Lose! Paper beats Rock!");
+                case "SCISSORS":
+                    wins++;
+                    return alert("You Win! Rock beats Scissors!");
             }
         case "PAPER":
-            if (computerSelection == "PAPER") {
-                ties++;
-                return alert("It's a tie!");
-            }
-            else if (computerSelection == "SCISSORS") {
-                losses++;
-                return alert("You Lose! Scissors beats Paper!");
-            }
-            else if (computerSelection == "ROCK") {
-                wins++;
-                return alert("You Win! Paper beats Rock!");
+            switch (computerSelection) {
+                case "PAPER":
+                    ties++;
+                    return alert("It's a tie!");
+                case "SCISSORS":
+                    losses++;
+                    return alert("You Lose! Scissors beats Paper!");
+                case "ROCK":
+                    wins++;
+                    return alert("You Win! Paper beats Rock!");
             }
         case "SCISSORS":
-            if (computerSelection == "SCISSORS") {
-                ties++;
-                return alert("It's a tie!");
-            }
-            else if (computerSelection == "ROCK") {
-                losses++;
-                return alert("You Lose! Rock beats Scissors!");
-            }
-            else if (computerSelection == "PAPER") {
-                wins++;
-                return alert("You Win! Scissors beats Paper!");
+            switch (computerSelection) {
+                case "SCISSORS":
+                    ties++;
+                    return alert("It's a tie!");
+                case "ROCK":
+                    losses++;
+                    return alert("You Lose! Rock beats Scissors!");
+                case "PAPER":
+                    wins++;
+                    return alert("You Win! Scissors beats Paper!");
             }
     }
 }
-
 
 function game() {
     let counter = 0;
@@ -85,5 +81,3 @@ function game() {
 }
 
 game();
-
-
