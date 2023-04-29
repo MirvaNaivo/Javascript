@@ -72,10 +72,10 @@ function game() {
     if (counter === 5) {
         alert("Game over! Scores: \n wins: " + wins + " ties: " + ties + " losses: " + losses);
 
-        if(wins > losses) {
+        if (wins > losses) {
             alert("You are the winner!");
         }
-        else if(losses > wins) {
+        else if (losses > wins) {
             alert("Oh no, you lost..");
         }
         else {
